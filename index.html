@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Git Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      background: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Git Tutorial</h1>
+
+  <section>
+    <h2>1. Download Git</h2>
+    <p>Install Git from <a href="https://git-scm.com/downloads" target="_blank">git-scm.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Set Username and Email</h2>
+    <pre>
+git config --global user.name "username"
+git config --global user.email "username@gmail.com"
+
+# Check configured name and email
+git config --global user.name
+git config --global user.email
+    </pre>
+  </section>
+
+  <section>
+    <h2>3. Initialize Git</h2>
+    <pre>
+git init     # Initialize an empty Git repo
+
+ls -lart     # Show hidden files (like .git folder)
+    </pre>
+  </section>
+
+  <section>
+    <h2>4. Git File Structure</h2>
+    <div>
+        <img src="/structure.png" alt="">
+    </div>
+    <ul>
+      <li>Untracked</li>
+      <li>Unmodified</li>
+      <li>Modified</li>
+      <li>Staged</li>
+    </ul>
+    <p>File flow:</p>
+    <pre>
+Untracked → Staged → Committed → Unmodified
+
+Unmodified → Modified → Staged → Committed → Unmodified
+    </pre>
+    <p><strong>Commit a file manually:</strong></p>
+    <pre>
+git commit
+# Inside the commit screen:
+press i (insert)
+type: Initial commit
+press ESC
+type: :wq (save and quit)
+    </pre>
+  </section>
+
+  <section>
+    <h2>5. Common Git Commands</h2>
+    <pre>
+git status           # Show untracked/modified files
+touch about.html     # Create a blank file
+git add -A           # Add all changes to staging
+git commit -m "Added HTML file"
+git checkout contact.html    # Discard changes to a file
+git checkout -f              # Force reset all files
+
+git log              # Show commit history
+git log -p -2        # Show last 2 commits with changes
+
+git diff             # Compare working dir with staging area
+git diff --staged    # Compare staging area with last commit
+
+git commit -a -m "Quick commit, skip staging"
+
+git rm fileName      # Remove file from working dir
+git rm --cached file # Untrack file (keep in storage)
+
+git status -s        # Short status view
+    </pre>
+  </section>
+
+  <section>
+    <h2>6. .gitignore Examples</h2>
+    <pre>
+/contact.html      # Ignore only in current dir
+*contact.html      # Ignore all matching files
+gitignor/          # Ignore the folder named gitignor
+    </pre>
+    <p>Create the file:</p>
+    <pre>
+touch .gitignore
+    </pre>
+  </section>
+
+  <section>
+    <h2>7. Git Branching</h2>
+    <pre>
+git branch new_feature      # Create a new branch
+git branch                  # List all branches
+git checkout new_feature    # Switch to new_feature branch
+git checkout main           # Switch back to main
+
+git merge new_feature       # Merge changes to main
+
+git checkout -b api_free    # Create and switch to new branch
+
+# Create a file in the new branch:
+touch api.php
+
+# Note: api.php won't appear in main branch until merged.
+    </pre>
+  </section>
+
+</body>
+</html>
