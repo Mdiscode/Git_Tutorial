@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Branch Commands</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="container mx-auto p-8">
+    <h1 class="text-4xl font-semibold text-center text-gray-800 mb-6">Git Branch Management Commands</h1>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Create Branch -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Create New Branch</h2>
+        <p class="text-lg text-gray-600 mb-4">To create a new branch:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git branch <span class="text-blue-500">feature/new-feature</span></pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git branch feature/new-feature</code></p>
+      </div>
+
+      <!-- Switch Branch -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Switch Branch</h2>
+        <p class="text-lg text-gray-600 mb-4">To switch to another branch:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git checkout <span class="text-blue-500">feature/new-feature</span></pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git checkout feature/new-feature</code></p>
+      </div>
+
+      <!-- Merge Branch -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Merge Branch</h2>
+        <p class="text-lg text-gray-600 mb-4">To merge a branch into the current branch:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git merge <span class="text-blue-500">feature/new-feature</span></pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git merge feature/new-feature</code></p>
+      </div>
+
+      <!-- Delete Branch -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Delete Branch</h2>
+        <p class="text-lg text-gray-600 mb-4">To delete a branch locally:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git branch -d <span class="text-blue-500">feature/new-feature</span></pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git branch -d feature/new-feature</code></p>
+      </div>
+
+      <!-- Git Add -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Git Add</h2>
+        <p class="text-lg text-gray-600 mb-4">To add changes to the staging area:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git add <span class="text-blue-500">index.html</span></pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git add index.html</code></p>
+      </div>
+
+      <!-- Git Commit -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Git Commit</h2>
+        <p class="text-lg text-gray-600 mb-4">To commit changes to the local repository:</p>
+        <pre class="bg-gray-200 p-4 rounded-lg text-gray-800">git commit -m "<span class="text-blue-500">Add new feature to homepage</span>"</pre>
+        <p class="text-sm text-gray-500 mt-2">Example: <code class="text-blue-500">git commit -m "Add new feature to homepage"</code></p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
